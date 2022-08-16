@@ -1,0 +1,126 @@
+.movie-holder {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    column-gap: 0rem;
+    justify-items: center;
+    row-gap: 2rem;
+}
+
+
+@media (min-width: 576px) {
+    .movie-holder {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        column-gap: 0rem;
+        justify-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .movie-holder {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 0rem;
+        justify-items: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .movie-holder {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 0rem;
+        justify-items: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    .movie-holder {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: 0rem;
+        justify-items: center;
+    }
+}
+
+@media (min-width: 1400px) {
+    .movie-holder {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        column-gap: 0rem;
+        justify-items: center;
+    }
+}
+
+
+
+/* .movie-section .container-fluid{
+    padding-left: 0;
+} */
+
+.movie-section {
+    background-image: linear-gradient(to right bottom, #141414, #1a1739, #191860, #171487, #1e00ae);
+}
+
+h1 {
+    font-size: 1.33rem;
+    margin-right: 40px;
+    margin-top: 0;
+}
+
+img {
+    width: 170px;
+    height: 230px;
+    margin-bottom: 1rem;
+}
+
+.divvy {
+    grid-row: auto;
+    width: 100%;
+    height: auto;
+    margin: 7px;
+    color: #fff;
+    font-size: 0.8rem;
+    /* font-weight: bold; */
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+.sort-div {
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    align-content: space-between;
+}
+
+.flex-checkbox-movie-Descending {
+    /* margin-left: auto; */
+    margin: auto 0;
+}
+
+
+
+label {
+    font-size: 1.1rem;
+}
+
+input {
+    width: 18px;
+    height: 18px;
+}
+
+.movie-section .form-select  {
+    width: 140px;
+    margin-right: auto;
+}
+
+.check-box-text {
+    font-family: MeshedDisplay;
+    font-size: 1.2rem;
+}
+
+/* .sort-div {
+    display: inline-block;
+} */
