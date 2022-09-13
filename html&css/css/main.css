@@ -309,6 +309,7 @@ label {
 }
 
 /* project section */
+
 .project-section-light {
   position: relative;
   padding-top: 5rem;
@@ -393,10 +394,22 @@ label {
   background-color: var(--color-light-peach);
 }
 
+/* project section 2 */
+
+.project-section-2-light {
+  position: relative;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-image: linear-gradient(180deg, rgba(59, 121, 116, 0.8) 20%, rgba(59, 121, 115, 0.8) 56%, rgba(59, 121, 115, 0.6) 100%), url("/html&css/assets/img/New-Images/Coney-island-cyclone.jpg");
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 /* contact section */
 
 .section-contact {
-  background-image: url('/html&css/assets/img/New-Images/coney-island-3.jpg');
+  background-image: url('/html&css/assets/img/New-Images/anthony-fomin-06gnle7U5G8-unsplash.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -444,10 +457,8 @@ label {
 }
 
 /* footer */
-.footer {
-  background-image: linear-gradient(180deg, rgba(59, 121, 116, 0.7) 20%, rgba(59, 121, 115, 0.7) 56%, rgba(59, 121, 115, 0.8) 100%), url('/html&css/assets/img/New-Images/anthony-fomin-06gnle7U5G8-unsplash.jpg');
-  background-size: cover;
-  background-position: center;
+.footer-light {
+  background-color: var(--color-light-dark-blue-teal);
 }
 
 .footer .footer-brand img, .footer .footer-brand svg {

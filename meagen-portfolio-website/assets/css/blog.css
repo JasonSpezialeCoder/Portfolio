@@ -1,0 +1,290 @@
+/*--------------------------------------------------------------
+# Set main reusable colors and fonts using CSS variables
+# Learn more about CSS variables at https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+--------------------------------------------------------------*/
+
+/* color */
+
+/* 
+pink
+RGB 242, 102, 139
+HSV 344, 58, 95
+CMYK 0, 58, 43, 5
+LAB 62, 57, 7
+
+teal blue 
+RGB 2, 94, 115
+HSV 191, 98, 45
+CMYK 98, 18, 0, 55
+LAB 37, -16, -18
+
+dark teal
+RGB 1, 31, 38
+HSV 191, 98, 15
+CMYK 98, 18, 0, 85
+LAB 10, -8, -8
+
+light teal 
+RGB 2, 104, 115
+HSV 186, 98, 45
+CMYK 98, 10, 0, 55
+LAB 40, -21, -14
+
+teal green
+RGB 3, 166, 136
+HSV 169, 98, 65
+CMYK 98, 0, 18, 35
+LAB 61, -43, 5 */
+
+/* Fonts */
+:root {
+  --font-default: 'Francois One', sans-serif;
+  --font-primary: 'Francois One', sans-serif;
+  --font-secondary: 'Francois One', sans-serif;
+  --font-para: 'Karla', sans-serif;
+}
+
+/* Colors */
+:root {  
+  /* Main color pallet */
+  --color-default: #F2668B;
+  --color-primary: #03A688;
+  --color-secondary: #011F26;
+  --color-third: #025E73;
+  --color-fourth: #026873; 
+  --color-black: #000; 
+  --color-white: #fff;
+}
+
+:root {
+  --color-bg-teal: #03A688;
+  --color-bg-pink: #F2668B;
+}
+
+/* background colors */
+.bg-teal {
+  background-color: var(--color-bg-teal);
+}
+
+.bg-pink {
+  background-color: var(--color-bg-pink);
+}
+
+/* background colors */
+.bg-dark-teal {
+  background-color: var(--color-secondary);
+}
+
+/* fonts */
+
+@font-face {
+  font-family: Caslon;
+  src: url('/meagen-portfolio-website/assets/fonts/adobe-caslon-pro/');
+}
+
+@font-face {
+  font-family: Brandon;
+  src: url('/meagen-portfolio-website/assets/fonts/Brandon-Grotesque-Font/');
+}
+
+/* Smooth scroll behavior */
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-secondary);
+}
+
+article .h6 {
+  margin: 0;
+}
+
+/* heading fonts */
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: Caslon;
+}
+
+/* blog para */
+
+p {
+  font-family: Brandon;
+}
+/* buttons */
+
+.btn-green {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-green:hover {
+  background-color: white;
+  color: var(--color-primary);
+}
+
+/* navbar */
+
+.headroom--not-top.navbar-theme-primary {
+  background-color: var(--color-secondary);
+}
+  
+/* logo */
+
+.logo-name {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 600;
+}
+
+/* light mode dark mode toggle */
+label {
+  margin-bottom: 0rem;
+}
+
+/* navbar */
+
+.navbar .navbar-nav .nav-link {
+  transition: all 0.8s all 0.2s ease;
+  color: white;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  transition: all 0.8s all 0.2s ease;
+  color: var(--color-primary);
+}
+
+.dropdown-menu-dark {
+  color: #E5E7EB;
+  background-color: #011F26;
+  border-color: #E5E7EB;
+}
+
+.list-group-item-action:hover, .list-group-item-action:focus {
+  z-index: 1;
+  color: white;
+  text-decoration: none;
+  background-color: #010e11;
+}
+
+.list-group-item {
+  color: white;
+}
+
+.list-group-item-action:hover, .list-group-item-action:focus {
+  z-index: 1;
+  color: white;
+  text-decoration: none;
+  background-color: var(--color-primary);
+}
+
+  @media (max-width: 991.98px){
+  .navbar-collapse.collapsing, .navbar-collapse.show {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background-color: var(--color-secondary);
+    animation: show-navbar-collapse .2s ease forwards;
+    box-shadow: 0 0 20px rgba(3, 166, 0136, 0.1);
+  }
+}
+
+.nav-link span:hover {
+  color: var(--color-primary);
+}
+
+.fa-times {
+  color: white;
+}
+
+.fa-times:hover {
+  color: white;
+}
+
+/* Blog pages */
+
+.section-header {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.90), rgba(45, 52, 54, 0.90)), url("/meagen-portfolio-website/assets/images/The-munsters-blog.jpg");
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+}
+
+.my-info p {
+  font-size: 1.1em;
+  text-align: justify;
+}
+
+.img-float {
+  float: left;
+  margin-right:2rem; 
+	shape-outside:circle();
+}
+/* custom image shadow */
+
+.blog-image-shadow {
+  box-shadow:
+    0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075),
+    0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075),
+    0 16px 16px hsl(0deg 0% 0% / 0.075)
+  ;
+}
+
+.blog-image-shadow-color {
+  filter: drop-shadow(
+    1px 2px 8px var(--color-secondary)
+  );
+}
+
+/* call to action */
+.cta-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.90), rgba(45, 52, 54, 0.30)), url("/meagen-portfolio-website/assets/images/pattern-art-5.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-clip: border-box;
+    border: 0.0625rem solid #1b1b1b;
+    border-radius: 1rem;
+}
+
+/* Similar articles to this one */
+.similar-articles .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: var(--color-secondary);
+  background-clip: border-box;
+  border: 0.0625rem solid #E5E7EB;
+  border-radius: 1rem;
+}
+
+.bg-card-color {
+  background-color: var(--color-secondary);
+}
+
+/* footer section */
+
+.footer-section {
+  background-color: var(--color-fourth);
+}
+
+/* blog page */
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 700px 700px;
+  grid-gap: 10px;
+}
+
+.grid-item-1 {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+}

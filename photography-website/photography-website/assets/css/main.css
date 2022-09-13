@@ -1,0 +1,356 @@
+/*--------------------------------------------------------------
+# Set main reusable colors and fonts using CSS variables
+# Learn more about CSS variables at https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+--------------------------------------------------------------*/
+
+/* color */
+/*
+  light-dark blue teal #3B7974 R: 59 G: 121 B: 116
+  light-dark green yellow #757848 R: 117 G: 120 B: 72
+  light-dark yellow #796337 R: 121 G: 99 B: 55
+  light-dark peach #795645 R: 121 G: 86 B: 69
+  light-dark teal green #5C7867 R: 92 G: 120 B: 103
+  light-dark orange #784F1F R: 120 G: 79 B: 31
+*/
+
+/*
+  light blue teal #5EC5BC R: 94 G: 197 B: 188
+  light green yellow #D7DC84 R: 215 G: 220 B: 132
+  light yellow #FFD476 R: 225 G: 212 B: 118
+  light peach #F9B08F R: 249 G: 176 B: 143
+  light teal green #A5D7B8 R: 165 G: 215 B: 184
+  light orange #F7A240 R: 247 G: 162 B: 64
+
+  light tan #f9dea760
+*/
+
+/*
+  dark-blue teal #1B3836 R: 27 G: 56 B: 54
+  dark-green yellow #373822 R: 55 G: 56 B: 34
+  dark-yellow #382F1A R: 56 G: 47 B: 26
+  dark-peach #382820 R: 56 G: 40 B: 32
+  dark-teal green #2B3830 R: 43 G: 56 B: 48
+  dark-orange #372612 R: 55 G: 38 B: 19
+*/
+
+/* Fonts */
+:root {
+    --font-default: 'Francois One', sans-serif;
+    --font-primary: 'Francois One', sans-serif;
+    --font-secondary: 'Francois One', sans-serif;
+    --font-para: 'Karla', sans-serif;
+  }
+  
+  /* Colors */
+  :root {
+    /* light dark colors */
+    --color-light-dark-peach: #795645; 
+    --color-light-dark-blue-teal: #3B7974;
+    --color-light-dark-green-yellow: #757848;
+    --color-light-dark-yellow: #796337;
+    --color-light-dark-teal-green: #5C7867;
+    --color-light-dark-orange: #784F1F;
+  
+    /* light colors */
+    --color-default: #2b180d;
+    --color-primary: #56b8e6;
+    --color-secondary: #004b8e;
+    --color-black: #000; 
+    --color-white: #fff;
+    --color-light-blue-teal: #5EC5BC;
+    --color-light-green-teal: #A5D7B8;
+    --color-light-yellow: #ffd476;
+    --color-light-green-yellow: #D7DC84;
+    --color-light-orange: #F7A240;
+    --color-light-peach: #F9B08F;
+    --color-light-tan: #f9dea760; 
+    --color-light-tan2: #fdf3de;
+  
+  
+    /* dark colors  */
+    --color-dark-peach: #382820;
+    --color-dark-teal-green: #2B3830;
+    --color-dark-yellow: #382F1A;
+    --color-dark-green-yellow: #373822;
+    --color-dark-blue-teal: #1B3836;
+    --color-dark-orange: #372612;
+  }
+  
+  @font-face {
+    font-family: Majestic;
+    src: url('/html&css/bootstrap-projects/photography-website/assets/fonts/MajesticInlineRegular.otf');
+  }
+  
+  /* Smooth scroll behavior */
+  :root {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #000;
+  }
+  
+  /* font */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Majestic;
+  }
+  
+  p {
+    font-family: var(--font-para);
+  }
+  
+  .lead {
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+  
+  /* button */
+  
+  .btn-color-light{
+    background-color: var(--color-light-yellow);
+    color: var(--color-dark-peach);
+  }
+  
+  /* navbar */
+  
+  .headroom--not-top.navbar-theme-primary {
+    background-color: var(--color-light-dark-peach);
+  }
+  
+  /* toggle */
+  
+  
+  .checkbox {
+      opacity: 0;
+      position: absolute;
+  }
+  
+  .label {
+      background-color: var(--color-light-yellow);
+      border-radius: 50px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px;
+      position: relative;
+      height: 26px;
+      width: 50px;
+      transform: scale(1.5);
+  }
+  
+  .label .ball {
+      background-color: var(--color-dark-peach);
+      border-radius: 50%;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      height: 22px;
+      width: 22px;
+      transform: translateX(0px);
+      transition: transform 0.2s linear;
+  }
+  
+  .checkbox:checked + .label .ball {
+      transform: translateX(24px);
+  }
+  
+  
+  .fa-moon {
+      color: var(--color-dark-peach);
+  }
+  
+  .fa-sun {
+      color: var(--color-light-dark-blue-teal);
+  }
+  
+  /* logo */
+  
+  .navbar-logo img {
+    height: 80px;
+    max-width: none;
+  }
+  
+  .navbar-logo-light {
+    color: var(--color-white);
+    font-family: Majestic;
+  }
+  
+  
+  /* light mode dark mode toggle */
+  label {
+    margin-bottom: 0rem;
+  }
+
+  /* section spacing */
+  
+  .section {
+    position: relative;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  @media (min-width: 576px) {
+  
+    .section-header {
+        position: relative;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+  
+    .section-header.section-sm {
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+    }
+  
+    .section-xl {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+  
+    .section-lg {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+  
+    .section-md {
+      position: relative;
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+  }
+  
+    .section-sm {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+  }
+  
+  /* hero section */
+  
+  .min-vh-50 {
+    min-height: 50vh !important;
+  }
+  
+  .hero-logo {
+    max-width: 80%;
+  }
+  
+  .display-hero {
+    font-size: 4rem;
+  }
+  
+  @media (min-width: 768px) {
+    .display-hero {
+      font-size: 5rem;
+    }
+  }
+  
+  /* new css hive gallery */
+  .section-hive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+  }
+
+  .hive-gallery {
+    position: relative;
+    /* to get a regualr hexagon with clip-path use the same scale, width is sqrt(3) / 2 of the height  */
+    width: calc(120px * 0.866);
+    height: 120px;
+  }
+
+  @media (min-width: 576px) {
+    .hive-gallery {
+        position: relative;
+        /* to get a regualr hexagon with clip-path use the same scale, width is sqrt(3) / 2 of the height  */
+        width: calc(260px * 0.866);
+        height: 260px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .hive-gallery {
+        position: relative;
+        /* to get a regualr hexagon with clip-path use the same scale, width is sqrt(3) / 2 of the height  */
+        width: calc(260px * 0.866);
+        height: 260px;
+    }
+  }
+  
+  .box {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: lightblue;
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  }
+  .box img {
+    transform-origin: 50% 50%;
+    object-fit: cover;
+    transition: all 0.5s ease-out;
+  }
+  .box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.25);
+    transition: all 0.5s ease-out;
+  }
+  .box:hover img {
+    transform: scale(1.2);
+  }
+  .box:hover::after {
+    background: rgba(0, 0, 0, 0);
+  }
+  
+  .box2.box {
+    transform: translate(calc(-50% - (10px / 2)), calc(-75% - (10px) / 2 * 1.732));
+  }
+  
+  .box3.box {
+    transform: translate(calc(50% + (10px / 2)), calc(-75% - (10px) / 2 * 1.732));
+  }
+  
+  .box4.box {
+    transform: translate(calc(-100% - 10px), 0);
+  }
+  
+  .box5.box {
+    transform: translate(calc(100% + 10px), 0);
+  }
+  
+  .box6.box {
+    transform: translate(calc(-50% - (10px / 2)), calc(75% + (10px) / 2 * 1.732));
+  }
+  
+  .box7.box {
+    transform: translate(calc(50% + (10px / 2)), calc(75% + (10px) / 2 * 1.732));
+  }
+
+  /* section about */
+  
+  .section-about {
+    background-color: #1B3836;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  
+  .about-heading {
+    font-size: 7rem;
+  }
+
+  .section-about .article {
+    display: grid;
+  }
+
+
+

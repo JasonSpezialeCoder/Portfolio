@@ -1,0 +1,479 @@
+/*--------------------------------------------------------------
+# Set main reusable colors and fonts using CSS variables
+# Learn more about CSS variables at https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+--------------------------------------------------------------*/
+
+/* color */
+
+/* 
+pink
+RGB 242, 102, 139
+HSV 344, 58, 95
+CMYK 0, 58, 43, 5
+LAB 62, 57, 7
+
+teal blue 
+RGB 2, 94, 115
+HSV 191, 98, 45
+CMYK 98, 18, 0, 55
+LAB 37, -16, -18
+
+dark teal
+RGB 1, 31, 38
+HSV 191, 98, 15
+CMYK 98, 18, 0, 85
+LAB 10, -8, -8
+
+light teal 
+RGB 2, 104, 115
+HSV 186, 98, 45
+CMYK 98, 10, 0, 55
+LAB 40, -21, -14
+
+teal green
+RGB 3, 166, 136
+HSV 169, 98, 65
+CMYK 98, 0, 18, 35
+LAB 61, -43, 5 */
+
+/* Fonts */
+:root {
+  --font-default: 'Francois One', sans-serif;
+  --font-primary: 'Francois One', sans-serif;
+  --font-secondary: 'Francois One', sans-serif;
+  --font-para: 'Karla', sans-serif;
+}
+
+/* Colors */
+:root {  
+  /* Main color pallet */
+  --color-default: #F2668B;
+  --color-primary: #03a688;
+  --color-secondary: #011F26;
+  --color-third: #025E73;
+  --color-fourth: #026873; 
+  --color-black: #000; 
+  --color-white: #fff;
+}
+
+/* background colors */
+.bg-dark-teal {
+  background-color: var(--color-secondary);
+}
+
+/* fonts */
+
+@font-face {
+  font-family: Caslon;
+  src: url('/meagen-portfolio-website/assets/fonts/adobe-caslon-pro/');
+}
+
+@font-face {
+  font-family: Brandon;
+  src: url('/meagen-portfolio-website/assets/fonts/Brandon-Grotesque-Font/');
+}
+
+/* Smooth scroll behavior */
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-third);
+}
+
+
+
+/* font */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Caslon;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: Caslon;
+}
+  
+.lead {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+/* buttons */
+
+.btn-green {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-green:hover {
+  background-color: white;
+  color: var(--color-primary);
+}
+
+/* navbar */
+
+.headroom--not-top.navbar-theme-primary {
+  background-color: var(--color-secondary);
+}
+  
+/* logo */
+
+.logo-name {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 600;
+  font-family: Caslon;
+}
+
+/* light mode dark mode toggle */
+label {
+  margin-bottom: 0rem;
+}
+
+/* navbar */
+
+.navbar .navbar-nav .nav-link {
+  transition: all 0.8s all 0.2s ease;
+  color: white;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  transition: all 0.8s all 0.2s ease;
+  color: var(--color-primary);
+}
+
+.dropdown-menu-dark {
+  color: #E5E7EB;
+  background-color: #011F26;
+  border-color: #E5E7EB;
+}
+
+.list-group-item-action:hover, .list-group-item-action:focus {
+  z-index: 1;
+  color: white;
+  text-decoration: none;
+  background-color: #010e11;
+}
+
+.list-group-item {
+  color: white;
+}
+
+.list-group-item-action:hover, .list-group-item-action:focus {
+  z-index: 1;
+  color: white;
+  text-decoration: none;
+  background-color: var(--color-primary);
+}
+
+  @media (max-width: 991.98px){
+  .navbar-collapse.collapsing, .navbar-collapse.show {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background-color: var(--color-secondary);
+    animation: show-navbar-collapse .2s ease forwards;
+    box-shadow: 0 0 20px rgba(3, 166, 0136, 0.1);
+  }
+}
+
+.nav-link span:hover {
+  color: var(--color-primary);
+}
+
+.fa-times {
+  color: white;
+}
+
+.fa-times:hover {
+  color: white;
+}
+
+/* global card style */
+
+.card {
+  border: none;
+  background-color:var(--color-secondary) ;
+}
+
+.card-title {
+  font-family: Caslon;
+}
+
+.card-text {
+  font-family: Brandon;
+}
+
+/* section header */
+
+.section-hero {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(45, 52, 54, 0.35)), url("/meagen-portfolio-website/assets/images/DSC06547.jpg");
+  background-size: cover; 
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*  @media (min-width: 768px) {
+
+  .section-header {
+      position: relative;
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+  }
+
+  .section-header.section-sm {
+      padding-top: 4rem;
+      padding-bottom: 3rem;
+  }
+
+  .section-xl {
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+  }
+
+  .section-lg {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+  }
+
+  .section-md {
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+  .section-sm {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+  }
+} */
+
+.header-icons {
+  color: var(--color-primary);
+}
+
+.hero-heading {
+  font-size: 2rem;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .hero-heading {
+    font-size: 3.2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-heading {
+    font-size: 3.8rem;
+  }
+}
+
+.section-hero p {
+  font-family: Brandon;
+  font-size: 1.2rem;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .section-hero p { 
+    font-size: 1.5rem;
+  }
+}
+
+/* section company logos */
+
+.section-pill {
+  position: relative;
+}
+
+.border-light-dark-teal {
+  border-color: #045062 !important;
+}
+
+/* section publications */
+
+.publications-section {
+  position: relative;
+  background-color: var(--color-third);
+}
+
+.card-background-image {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.65), rgba(45, 52, 54, 0.65)), url("/html&css/bootstrap-projects/blog-portfolio/assets/images/Travel-blog-1..jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-blog-image-card-1 {
+  background-image: url("/html&css/bootstrap-projects/blog-portfolio/assets/images/Van-life-blog.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  object-fit: contain;
+  height: 188px;
+}
+
+.bg-blog-image-card-2 {
+  background-image: url("/html&css/bootstrap-projects/blog-portfolio/assets/images/Brewery-blog-1.jpg");
+  background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   object-fit: contain;
+   height: 188px;
+}
+
+.bg-blog-image-card-3 {
+  background-image: url("/html&css/bootstrap-projects/blog-portfolio/assets/images/House-music-blog-1.jpg");
+  background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   object-fit: contain;
+   height: 188px;
+}
+
+.bg-card-color-1 {
+  background-color: var(--color-secondary);
+}
+
+@media (min-width: 576px) {
+  .publications-section .card:last-child {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .publications-section .card:last-child {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* about me */
+
+.section-about {
+  position: relative;
+  background-color: var(--color-default);
+}
+
+.section-about p{
+  font-family: Brandon;
+}
+
+.organic-clip-path {
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+@media (min-width: 992px) {
+  .organic-clip-path {
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    transition: clip-path 1s;
+  }
+  
+  .organic-clip-path:hover {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    cursor: pointer;
+  }
+}
+
+/* .box {
+  clip-path: circle(75%);
+  transition: clip-path 1s;
+}
+
+.box:hover {
+  clip-path: circle(25%);
+} */
+
+/* trending blog */
+
+.section-trending-blogs {
+  background-color: var(--color-secondary);
+  overflow: hidden;
+  clear: both;
+}
+
+.section-trending-blogs .nav-pills .nav-link:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.section-trending-blogs .nav-pills .active {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.section-trending-blogs .card {
+  background-color: transparent;
+}
+
+.trending-blog-grid {
+  display: inline-grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .trending-blog-grid {grid-template-columns: repeat(3, 1fr);}
+}
+
+.filterBlogCard {
+  display: none; /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* section resume */
+
+.section-resume {
+  position: relative;
+  background-color: var(--color-default);
+}
+
+/* section contact */
+
+.section-contact {
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(45, 52, 54, 0.35)), url("/html&css/bootstrap-projects/blog-portfolio/assets/images/New-york-urban-building.jpg");
+  background-size: cover; 
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.section-contact .card {
+  border: none;
+  background-color: rgba(3, 166, 136, 0.6);
+ }
+
+ /* section my website */
+
+ .section-my-website {
+  background-color: #0f0f0f;
+ }
+
+ .section-my-website .logo-name {
+    margin-top: 1rem;
+    font-size: 3rem;
+    color: white;
+    font-weight: 600;
+ }
+
+ .section-my-website .lead {
+  font-size: 1.2rem;
+ }
+
+/* footer */
+
+.footer-section {
+  background-color: var(--color-fourth);
+}
